@@ -48,9 +48,29 @@ The results from this step are below :
 
 ### 2. Do you see any benefits in camera-lidar fusion compared to lidar-only tracking (in theory and in your concrete results)? 
 
+**Camera highlights**
+- Solid data acquisition sensor useful in image processing(traffic signs, lane detection etc)
+- Better performance highly reflective surface/environment. 
+- Poor performance in low-light / night time.
+
+**Lidar highlights**
+- Great in low-light/night-time
+- Provides fairly accurate spatial information on objects within its FOV.
+
+Autonomous/Car Safety is a massive topic in the industrial automotive industry. Its very risky to perform tracking using just one sensor - hence, we should perform fusion of both to provide robust results and maintain high safety standards. Moreiver, from this project, we can clearly see that with the fusion, RMSE numbers look better and reliable.
+
 
 ### 3. Which challenges will a sensor fusion system face in real-life scenarios? Did you see any of these challenges in the project?
 
+Following are some points which can be pose as a challenge to this sensor fusion system we have: 
+- Night-time testing scenarios that can potentially affect the performance of this model.(there are no night-time or low visibility frames provided as input yet)
+- Rough weather might impact performance as well. (Rain/snow/dust/mist etc)
+- Multiple object occlusion varying in sizes and shapes. For example, cars or animals in the way .. how will this model perform when fed that as an input ?
+- Also, non linear measurements provided in the lidar where objects move side-ways and not just in a linear fashion ,like, in this model.
 
 ### 4. Can you think of ways to improve your tracking results in the future?
 
+We can try and experiment with the following points to probably improve tracking results : 
+- SNN is not efficient enough for data association - maybe experiment with GNN and JPDA.
+- Incorporate more diverse or even the same lidars and cameras on the vehicle - for better performance and results.
+- Fine tune the params provided in the script.
