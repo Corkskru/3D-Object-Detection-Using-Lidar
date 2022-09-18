@@ -5,6 +5,7 @@ Please use this starter template to answer the following questions:
 ### 1. Write a short recap of the four tracking steps and what you implemented there (filter, track management, association, camera fusion). Which results did you achieve? Which part of the project was most difficult for you to complete, and why?
 
 **EKF implementation**
+
 Following are the highlights of this Tracking Project : 
 
 
@@ -34,6 +35,16 @@ The RMSE plot is below :
 The results from this step are below :
 ![capt_1](https://user-images.githubusercontent.com/11416834/190886910-5b388ffb-42b5-4e1b-955c-d342aa46a068.PNG)
 ![rmse_only_lidar](https://user-images.githubusercontent.com/11416834/190886912-ebb539d7-7bdc-4a9a-9f3c-f98387a439e1.PNG)
+
+**Camera Fusion**
+
+In the last step, we implement a nonlinear camera measurement model . We fuse the camera data and the lidar data to overcome the limitations w.r.t FOV of the lidar and also the additional sensor proves useful in a much efficient tracking model. 
+
+Please review the tracking video under `results/my_tracking_results.avi`
+The results from this step are below : 
+
+![capt_final](https://user-images.githubusercontent.com/11416834/190887054-72b10c9d-9d38-4e95-bd8c-d4fe4a68b169.PNG)
+![capt_final_gts](https://user-images.githubusercontent.com/11416834/190887077-c4522160-c162-4c22-952c-98f2b43cc5e6.PNG)
 
 ### 2. Do you see any benefits in camera-lidar fusion compared to lidar-only tracking (in theory and in your concrete results)? 
 
